@@ -1,3 +1,4 @@
+# 행렬 및 배열 계산에 유용한 라이브러리
 import numpy as np
 
 # np.array() 실습
