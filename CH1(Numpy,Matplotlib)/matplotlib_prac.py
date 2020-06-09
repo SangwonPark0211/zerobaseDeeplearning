@@ -8,7 +8,7 @@ y = np.sin(x)
 plt.plot(x, y)
 plt.show()
 
-# 그래프 각 축의 이름, 레이블, 그래프 제목 표시
+# 그래프 그리고 각 축의 이름, 레이블, 그래프 제목 표시
 z = np.arange(0, 6, 0.1)
 y1 = np.sin(z)
 y2 = np.cos(z)
