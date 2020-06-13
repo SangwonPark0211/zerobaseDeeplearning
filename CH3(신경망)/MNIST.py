@@ -40,17 +40,18 @@ def predict(network, x):
 
     return y
 
-# x, t = get_data()
-# network = init_network()
+# 배치처리 도입하지 않은 경우
+x, t = get_data()
+network = init_network()
 
-# accuracy_cnt = 0
-# for i in range(len(x)):
-#     y = predict(network, x[i])
-#     p = np.argmax(y) # 확률(y값)이 가장 높은 원소의 인덱스를 얻는다.
-#     if p == t[i]:
-#         accuracy_cnt += 1
+accuracy_cnt = 0
+for i in range(len(x)):
+    y = predict(network, x[i])
+    p = np.argmax(y) # 확률(y값)이 가장 높은 원소의 인덱스를 얻는다.
+    if p == t[i]:
+        accuracy_cnt += 1
 
-# print("Accuracy:", str(float(accuracy_cnt/len(x))))
+print("Accuracy:", str(float(accuracy_cnt/len(x))))
 
 # 배치처리 도입
 x, t = get_data()
